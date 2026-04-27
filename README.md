@@ -1,11 +1,9 @@
 # feedforward-reconstruction-papers
 
-Concise capability index for feed-forward and related 3D reconstruction, geometry, and tracking papers. Pipeline-only capabilities are marked as `No`; detailed evidence lives in `capability_summaries/`.
-
 ## Strictly Feed-Forward Methods
 
 
-| Paper                                                                                                                                                | 3D Recon          | Tracking | Frame              | Camera Params | Metric  | Occ/Vis | Multi-view | Context      | GT Calib Needed | Moving Cam | Dynamic |
+| Paper                                                                                                                                                | 3D Recon          | Tracking | Frame              | Predicted Camera Params | Metric  | Predicted Occ/Vis | Multi-view | Context      | GT Calib Needed | Moving Cam | Dynamic Scene |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | -------- | ------------------ | ------------- | ------- | ------- | ---------- | ------------ | --------------- | ---------- | ------- |
 | **DePT3R** Dec 2025 [arXiv](https://arxiv.org/abs/2512.13122) · [Project](https://github.com/StructuresComp/DePT3R)                                  | Dense             | 2D+3D    | Both; fixed cam    | Both          | No      | No      | No         | Global       | Intrinsics      | Yes        | Yes     |
 | **D4RT** Dec 2025 [arXiv](https://arxiv.org/abs/2512.08924) · [Project](https://d4rt-paper.github.io/)                                               | Dense             | 2D+3D    | Both; flex cam     | Both          | No      | Yes     | No         | Global       | No              | Yes        | Yes     |
@@ -33,7 +31,7 @@ Concise capability index for feed-forward and related 3D reconstruction, geometr
 ## Other / Hybrid / Optimization-Based Methods
 
 
-| Paper                                                                                                                                                                          | 3D Recon | Tracking | Frame           | Camera Params | Metric  | Occ/Vis | Multi-view | Context  | GT Calib Needed  | Moving Cam | Dynamic |
+| Paper                                                                                                                                                                          | 3D Recon | Tracking | Frame           | Predicted Camera Params | Metric  | Predicted Occ/Vis | Multi-view | Context  | GT Calib Needed  | Moving Cam | Dynamic Scene |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | -------- | --------------- | ------------- | ------- | ------- | ---------- | -------- | ---------------- | ---------- | ------- |
 | **AMB3R** Nov 2025 [arXiv](https://arxiv.org/abs/2511.20343) · [Project](https://hengyiwang.github.io/projects/amber)                                                          | Dense    | No       | Both; flex cam  | Extrinsics    | Yes     | No      | Unclear    | Hybrid   | No               | Yes        | Partial |
 | **VGGT-SLAM** May 2025 [arXiv](https://arxiv.org/abs/2505.12549) · [Project](https://github.com/MIT-SPARK/VGGT-SLAM)                                                           | Dense    | No       | Both; fixed cam | Both          | No      | No      | No         | Hybrid   | No               | Yes        | No      |
