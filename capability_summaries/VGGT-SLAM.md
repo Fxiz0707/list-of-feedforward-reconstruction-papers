@@ -5,7 +5,7 @@
 
 2. **Dense reconstruction:** Yes. The system uses VGGT's dense depth maps D = {D_1, ..., D_w}, with one depth value per pixel per frame, to construct submap point clouds. Components of M, D, and C share the same width and height (i.e., depth is image-sized). Low-confidence points are pruned via confidence threshold tau_conf but the representation is fundamentally per-pixel. Dense reconstruction metrics are reported in Sec. 5.3, Table 3 (p. 8).
 
-3. **Reference frame:** Fixed world. The SL(4) factor graph backend computes a single global world frame; within each submap window the anchor is the first frame of that window, fixed by the algorithm and not user-selectable.
+3. **Reference frame:** Fixed world. The SL(4) factor graph backend computes a single global world frame; within each submap window the world frame is set by the first frame of that window, fixed by the algorithm and not user-selectable.
 
 4. **Metric scale:** No. The paper explicitly revisits the Projective Reconstruction Theorem to argue that, with uncalibrated monocular cameras, the reconstruction is determined only up to a 15-DOF projective transformation (homography) belonging to SL(4). VGGT may approximate metric scale from learned priors in favorable conditions, but "in the most general case when estimates of scene priors are unreliable, the reconstruction differs by a projective transformation" requiring SL(4) rectification (Sec. 4.2, pp. 4–5; Abstract, p. 1; Conclusion, p. 9).
 

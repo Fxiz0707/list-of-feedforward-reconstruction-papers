@@ -5,7 +5,7 @@
 
 2. **Dense reconstruction:** Yes. The model inherits the pointmap paradigm from VGGT: every pixel in each input image receives a predicted 3D coordinate (per-pixel 2D-to-3D regression). Sec. 3 (Preliminaries) defines per-image dense pointmaps; Sec. 4.2 fuses per-pixel features into voxels; Sec. 4.3 trains with both depth and pointmap losses.
 
-3. **Reference frame:** Selectable. The anchor is the first-designated image via the token scheme; by choosing which image is placed first, the user can designate any frame as the world reference, making both world-space and egocentric output available.
+3. **Reference frame:** Selectable. The world frame is set by the first-designated image; by choosing which image is placed first, the user can designate any frame as the reference, making both world-space and egocentric output available.
 
 4. **Metric scale:** Yes. Metric-scale recovery is a primary contribution (Sec. 4.1, "Metric-scale Reconstruction"). A scale head maps VGGT encoder features and DPT depth features via a 3-layer MLP and 2-layer convolution to per-frame metric log-depth, supervised with an L1 loss. At inference, per-frame scales are estimated and their median aligns the full reconstruction to metric space. Evaluated on NYUv2, KITTI, ETH3D, ScanNet, DIODE (Table 1) and metric-scale multi-view depth (Table 4).
 

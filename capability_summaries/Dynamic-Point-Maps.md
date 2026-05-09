@@ -5,7 +5,7 @@
 
 2. **Dense reconstruction:** Yes. Point maps are pixel-aligned by definition: each pixel u receives a 3D point p = P(u) ∈ ℝ³ (Sec. 3.1). All four predicted point maps maintain this per-pixel density (Sec. 3.2, Eq. 1).
 
-3. **Reference frame:** Fixed world. All four pointmaps are expressed in the fixed reference frame π_1 (the first frame's camera coordinate system); the anchor is hard-coded and not user-selectable.
+3. **Reference frame:** Fixed world. All four pointmaps are expressed in the fixed reference frame π_1 (the first frame's camera coordinate system); the world frame is hard-coded and not user-selectable.
 
 4. **Metric scale:** No. Sec. 3.3 (Training loss) explicitly states: "the scale of a 3D scene cannot be determined uniquely from any number of views; therefore, we relax the predictions to be determined up to a scaling factor." The regression loss normalizes by the median norm of the point cloud. Output is up-to-scale.
 

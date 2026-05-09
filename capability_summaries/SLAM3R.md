@@ -5,7 +5,7 @@
 
 2. **Dense reconstruction:** Yes. I2P infers dense 3D pointmaps for every pixel of the keyframe and all supporting frames, with point regression head producing outputs of shape H×W×3 and confidence maps H×W×1 for every frame in the window (Sec. 3.1, p. 4).
 
-3. **Reference frame:** Fixed world. L2W registers all local maps into a single global reference frame, but the anchor is determined by the algorithm (the middle keyframe by default), not freely chosen by the user.
+3. **Reference frame:** Fixed world. L2W registers all local maps into a single global reference frame, but the world frame is determined by the algorithm (middle keyframe by default), not freely chosen by the user.
 
 4. **Metric scale:** No. I2P training normalizes both predicted and ground-truth pointmaps to a canonical scale defined by the average distance of valid points to the origin (Sec. 3.1, p. 4; training loss includes explicit scale factor z). Reconstruction evaluation requires Umeyama + ICP alignment to ground truth before reporting centimeter errors (Sec. 4.1, p. 7). L2W omits normalization only to maintain consistency with already-registered scene frames, not to recover absolute metric scale (Sec. 3.2, p. 5).
 

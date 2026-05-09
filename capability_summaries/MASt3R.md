@@ -5,7 +5,7 @@
 
 2. **Dense reconstruction:** Yes. Pointmaps are per-pixel H×W×3 arrays, and the added descriptor head produces per-pixel H×W×d feature maps, giving dense 3D coverage rather than sparse keypoints only (Fig. 2, p. 4; Sec. 3.1–3.2, pp. 4–5).
 
-3. **Reference frame:** Selectable. Both pointmaps for a pair are expressed in the first image's camera coordinate frame; placing any image first makes it the reference, so the anchor is effectively user-selectable via input ordering, providing both world-space and egocentric capability.
+3. **Reference frame:** Selectable. Both pointmaps for a pair are expressed in the first image's camera coordinate frame; placing any image first makes it the reference, so the world frame is effectively user-selectable via input ordering, providing both world-space and egocentric capability.
 
 4. **Metric scale:** Yes. When ground-truth pointmaps are metric, the paper removes scale normalization from the regression loss (setting the normalizer z = z-hat), training the network to predict pointmaps directly in metric units. The Map-free evaluation confirms metric depth output from MASt3R yields competitive results. This is learned metric prediction conditioned on metric training data, not a domain-invariant guarantee (Sec. 3.1, pp. 4–5; Sec. 4.1, p. 6; Sec. 4.2, pp. 7–8).
 

@@ -5,7 +5,7 @@
 
 2. **Dense reconstruction:** No. The method has no dense reconstruction output mode: it tracks query points, reports inference for 1,024 query points over 32 frames, and obtains dense per-frame geometry from supplied or estimated depth maps rather than reconstructing it as an output (Sec. 3, p. 3; Implementation Details, p. 6; Supp. C, p. 14). Although its internal feature maps are dense over image cells, the delivered result is query-based point tracking, not dense scene reconstruction.
 
-3. **Reference frame:** Fixed world. TAPIP3D offers two hardcoded modes — a first-camera world frame (when poses are supplied) and a per-frame camera frame (pose-free mode) — but neither reference is freely designatable by the user; the mode is selected at run time, not the specific anchor frame.
+3. **Reference frame:** Fixed world. TAPIP3D offers two hardcoded modes — a first-camera world frame (when poses are supplied) and a per-frame camera frame (pose-free mode) — but neither reference is freely designatable by the user; the mode is selected at run time, not the specific reference frame.
 
 4. **Metric scale:** Partial. TAPIP3D preserves the scale of the input geometry rather than independently recovering metric scale: sensor or ground-truth depth can yield metric tracks, and the stereo demonstration says FoundationStereo can produce metric-scaled point tracks, while monocular estimated geometry determines the scale quality (Sec. 3, p. 3; Supp. D, pp. 14-15). The method also normalizes coordinates by a scale factor during processing, so metric scale is inherited from the provided depth/calibration source (Implementation Details, p. 6; Supp. B, p. 14).
 

@@ -5,7 +5,7 @@
 
 2. **Dense reconstruction:** Yes. A pointmap is explicitly defined as "a set of 3D locations indexed by pixels in an image I" with shape H×W×3, i.e., one 3D point per pixel (Section 3.1). DPT decoding heads produce dense local and global pointmaps and confidence maps (Section 3.3).
 
-3. **Reference frame:** Fixed world. All pointmaps are expressed in the coordinate frame of the first input image I_1; the anchor is fixed by architecture and cannot be freely reassigned, though the first image can be changed by reordering inputs.
+3. **Reference frame:** Fixed world. All pointmaps are expressed in the coordinate frame of the first input image I_1; the world frame is fixed by architecture; the first image can be changed by reordering inputs.
 
 4. **Metric scale:** No. Training uses a normalized 3D pointwise regression loss (Eq. 2) that independently normalizes predictions and targets by their mean Euclidean distance to the origin: z = (1/|X|) Σ ||x||₂. The paper does not claim metric scale output and provides no metric-scale supervision or evaluation.
 

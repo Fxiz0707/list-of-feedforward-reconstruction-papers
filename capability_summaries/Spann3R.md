@@ -5,7 +5,7 @@
 
 2. **Dense reconstruction:** Yes. The network output head generates a per-pixel pointmap and confidence map — dense 3D point fields rather than sparse keypoints (Sec. 3.1, p. 4, Eq. 5). The evaluation directly compares predicted dense pointmaps with back-projected per-point depth, excluding invalid and background points (Sec. 4.1, p. 6).
 
-3. **Reference frame:** Fixed world. All pointmap outputs are accumulated in a single world frame established by the first processed frame via the spatial memory; the reference anchor is hard-coded and not user-selectable.
+3. **Reference frame:** Fixed world. All pointmap outputs are accumulated in a single world frame established by the first processed frame via the spatial memory; the world frame is hard-coded and not user-selectable.
 
 4. **Metric scale:** No. The evaluation states explicitly: "the reconstruction is up to an unknown scale, we align the reconstruction following DUSt3R" before comparison (Sec. 4.1, p. 6). The confidence loss normalizes predicted and ground-truth pointmaps by their average distances, and the supplementary scale loss (Eq. 13, Supp. Sec. 6, p. 9) only prevents trivially large scale rather than enforcing absolute metric scale.
 
