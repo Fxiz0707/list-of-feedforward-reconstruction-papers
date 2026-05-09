@@ -12,7 +12,7 @@
 | **DepthAnything3** Nov 2025 [arXiv](https://arxiv.org/abs/2511.10647) · [Project](https://depth-anything-3.github.io/) | Dense | No | Selectable | Extrinsics + Intrinsics | Partial | No | Yes | Global | No | Yes | No |
 | **MapAnything** Sep 2025 [arXiv](https://arxiv.org/abs/2509.13414) · [Project](https://map-anything.github.io/) | Dense | No | Selectable | Extrinsics + Intrinsics | Yes | No | Yes (arbitrary) | Global | No | Yes | No |
 | **G-CUT3R** Aug 2025; ICLR 2026 [arXiv](https://arxiv.org/abs/2508.11379) | Dense | No | Fixed world | Extrinsics | Yes | No | No | Hybrid | No | Yes | Yes |
-| **π³** Jul 2025; ICLR 2026 [arXiv](https://arxiv.org/abs/2507.13347) · [Project](https://yyfz.github.io/pi3/) | Dense | No | Fixed world | Extrinsics | No | No | Yes (arbitrary) | Global | No | Yes | Yes |
+| **π³** Jul 2025; ICLR 2026 [arXiv](https://arxiv.org/abs/2507.13347) · [Project](https://yyfz.github.io/pi3/) | Dense | No | Egocentric | Extrinsics | No | No | Yes (arbitrary) | Global | No | Yes | Yes |
 | **SpatialTrackerV2** Jul 2025 [arXiv](https://arxiv.org/abs/2507.12462) · [Project](https://spatialtracker.github.io/) | Dense | 2D+3D | Fixed world | Extrinsics + Intrinsics (focal only) | Yes | Yes | No | Global | No | Yes | Yes |
 | **TAPIP3D** Apr 2025; NeurIPS 2025 [arXiv](https://arxiv.org/abs/2504.14717) · [Project](https://tapip3d.github.io/) | No; tracking only | 2D+3D | Fixed world | Pipeline | Partial | Yes | No | Fixed-window | Intrinsics | Yes | Yes |
 | **St4RTrack** Apr 2025 [arXiv](https://arxiv.org/abs/2504.13152) · [Project](https://st4rtrack.github.io/) | Dense | 2D+3D | Fixed world | Extrinsics + Intrinsics (partial) | No | No | No | Pairwise | No | Yes | Yes |
