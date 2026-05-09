@@ -3,7 +3,7 @@
 
 1. **3D reconstruction:** No. LAPA is a point-tracking method rather than a point-cloud or dense 3D reconstruction method: Table 1 marks LAPA's 3D reconstruction capability as unsupported, and the method is defined around tracking M 3D points over time and outputting 3D trajectories (Table 1 and Sec. 3, pp. 3-5).
 2. **Dense reconstruction:** No. The method reconstructs sparse tracked/query points only, using CoTracker candidate tracks and an MLP to predict coordinates for those points, not dense scene geometry, surfaces, or point clouds (Sec. 3.1-3.3, pp. 3-5).
-3. **Reference frame:** N/A. LAPA is a multi-camera 2D point tracker (Q1 = No); it produces no 3D geometry output.
+3. **Reference frame:** Fixed world. LAPA outputs 3D point trajectories in the world coordinate frame established by the provided camera extrinsics; the world frame is fixed by the calibration input and cannot be freely reassigned (Sec. 3.3, p. 5; Sec. 4.1, p. 5).
 4. **Metric scale:** Yes. In the evaluated setups, metric scale is preserved through calibrated, scale-consistent multi-camera datasets, and the model is trained/evaluated against ground-truth 3D points; this depends on supplied calibrated inputs rather than estimating scale from uncalibrated video (Sec. 4.1, p. 5; Supp. Sec. 6.6, p. 6).
 5. **Point tracking:** Yes. Point tracking is the core task: LAPA preserves point identities across time and views using cross-view attention and track-query correspondence (Introduction, p. 2; Sec. 3.2-3.3, pp. 4-5).
 6. **3D tracks:** Yes. LAPA directly outputs 3D point trajectories and evaluates them with 3D point tracking metrics such as APD and 3D-AJ (Introduction, p. 2; Sec. 3.3, p. 5; Sec. 4.1, p. 5).

@@ -7,7 +7,7 @@
 | ----- | -------- | -------- | ----- | ----------------------- | ------ | ----------------- | ---------- | ------- | --------------- | ---------- | ------------- |
 | **DePT3R** Dec 2025 [arXiv](https://arxiv.org/abs/2512.13122) · [Project](https://github.com/StructuresComp/DePT3R) | Dense | 2D+3D | Fixed world | Extrinsics + Intrinsics | No | No | No | Global | No | Yes | Yes |
 | **D4RT** Dec 2025 [arXiv](https://arxiv.org/abs/2512.08924) · [Project](https://d4rt-paper.github.io/) | Dense | 2D+3D | Selectable | Extrinsics + Intrinsics | No | Yes | No | Global | No | Yes | Yes |
-| **LAPA** Dec 2025 [arXiv](https://arxiv.org/abs/2512.04213) · [Project](https://github.com/ostadabbas/Look-Around-and-Pay-Attention-LAPA-) | No; tracking only | 2D+3D | N/A | No | Yes | No | Yes | Hybrid | Extrinsics + Intrinsics | No | Yes |
+| **LAPA** Dec 2025 [arXiv](https://arxiv.org/abs/2512.04213) · [Project](https://github.com/ostadabbas/Look-Around-and-Pay-Attention-LAPA-) | No; tracking only | 2D+3D | Fixed world | No | Yes | No | Yes | Hybrid | Extrinsics + Intrinsics | No | Yes |
 | **MV-TAP** Dec 2025 [arXiv](https://arxiv.org/abs/2512.02006) · [Project](https://cvlab-kaist.github.io/MV-TAP/) | No; tracking only | 2D | N/A | No | No | Yes | Yes (arbitrary) | Global | Extrinsics + Intrinsics | Yes | Yes |
 | **DepthAnything3** Nov 2025 [arXiv](https://arxiv.org/abs/2511.10647) · [Project](https://depth-anything-3.github.io/) | Dense | No | Selectable | Extrinsics + Intrinsics | Partial | No | Yes | Global | No | Yes | No |
 | **MapAnything** Sep 2025 [arXiv](https://arxiv.org/abs/2509.13414) · [Project](https://map-anything.github.io/) | Dense | No | Selectable | Extrinsics + Intrinsics | Yes | No | Yes (arbitrary) | Global | No | Yes | No |
